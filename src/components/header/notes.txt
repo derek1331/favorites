@@ -1,0 +1,2 @@
+ERRORS
+- a router my only have one child

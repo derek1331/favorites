@@ -1,0 +1,11 @@
+.movies {
+    display: flex;
+    justify-content: center;
+}
+
+.movies-container {
+    flex-direction: column;
+    width: 60%;
+    /* border: 5px solid red; */
+    padding: 5px;
+}

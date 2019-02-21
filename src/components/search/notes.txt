@@ -1,0 +1,32 @@
+this === document.activeElement // where 'this' is a dom object
+
+
+<input type="text" onkeydown="myFunction(event)"> 
+
+function myFunction(event) {
+  var x = event.keyCode;
+  if (x == 27) {  // 27 is the ESC key
+    alert ("You pressed the Escape key!");
+  }
+}
+
+$("#lastWord").html(function(){
+  var text= $(this).text().trim().split(" ");
+  var last = text.pop();
+  return text.join(" ") + (text.length > 0 ? " <span class='red'>" + last + "</span>" : last);
+});
+
+$("#firstWord").html(function(){
+  var text= $(this).text().trim().split(" ");
+  var first = text.shift();
+  return (text.length > 0 ? "<span class='red'>"+ first + "</span> " : first) + text.join(" ");
+});
+
+
+firstWord = () => {
+    let firstWord = document.querySelectorAll('search-container-info').value;
+
+    let text= $(firstWord).text().trim().split(" ");
+    let first = text.shift();
+    return (text.length > 0 ? "<span class='red'>"+ first + "</span> " : first) + text.join(" ");
+}
